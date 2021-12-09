@@ -11,6 +11,19 @@ ruta='/usuario'
 def inicio():
     return render_template('index.html')
 
+@app.route('/Admin')
+def Admin():
+    return render_template('Admin.html')
+
+@app.route('/Registro')
+def Register():
+    return render_template('Registro.html')
+
+@app.route('/About')
+def About():
+    return render_template('About.html')
+
+
 @app.route(ruta+'/')
 # @app.route('/usuario/')
 def index():

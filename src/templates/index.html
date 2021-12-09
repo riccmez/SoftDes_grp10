@@ -17,18 +17,35 @@
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
+  <div class="picture"></div>
 
-  <div>
+  <div class="header" id="myHeader">
+    <h3 class="Page_Title">Toke</h3>
+    <h3 class="navs1"> <a href="/About">About </a> </h3>
+    <h3 class="navs2"> <a href="/Registro">Register </a> </h3>
+    <h3 class="navs3"> <a href="/Admin">Admin </a></h3>
+  </div>
+  <!-- <div>
     <h3 class="Page_Title">Toke</h3>
     <h3 class="navs1"> About </h3>
     <h3 class="navs2"> Register </h3>
     <h3 class="navs3"> Admin </h3>
-  </div>
+  </div> -->
   
   <div>
     <h1 class="Big_Title"> Welcome to Toke </h1>
   </div>
+  <br>
 
+  <form action="" class="container-custom">
+    <label for="fname">e-mail:</label><br>
+    <input class="lighttext" type="text" id="fname" value="John"><br><br>
+    <label for="fname">Contraseña:</label><br>
+    <input class="lighttext" type="text" id="fname" value="John"><br><br>
+    <input class="lighttext" type="submit" value="Submit">
+  </form>
+
+  <script src="{{ url_for('static', filename='js/main.js')}}"></script>
   <script src="{{ url_for('static', filename='js/jquery-2.2.3.min.js')}}"></script>
   <script src="{{ url_for('static', filename='js/bootstrap.min.js')}}"></script>
   <script src="{{ url_for('static', filename='js/app.min.js')}}"></script>
