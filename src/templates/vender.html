@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toke Inicio</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/AdminLTE.min.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/_all-skins.min.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dataTables.bootstrap.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="picture"></div>
+
+  <div class="header" id="myHeader">
+    <h3 class="Page_Title"> <a href="/">Toke </a> </h3>
+    <h3 class="navs1"> <a href="/About">About </a> </h3>
+    <h3 class="navs2"> <a href="/Registro">Register </a> </h3>
+    <h3 class="navs3"> <a href="/Admin">Admin </a></h3>
+    <h3 class="navs4"> <a href="/Vender">Sell </a> </h3>
+  </div>
+  
+  <div>
+    <h1 class="Big_Title"> Sell in Toke </h1>
+  </div>
+  <br>
+
+  <form action="/vendedor/index" class="container-custom">
+    <label for="fname">e-mail:</label><br>
+    <input class="lighttext" type="text" id="fname" placeholder="example@mail.com" name="uname" required><br><br>
+    <label for="fname">Contraseña:</label><br>
+    <input class="lighttext" type="password" placeholder="Enter Password" id="fname" required><br><br>
+    <label><input type="checkbox" checked="checked" name="remember"> Recordar cuenta</label><br><br>
+    <input class="lighttext" type="submit" value="Submit">
+  </form>
+
+  <script src="{{ url_for('static', filename='js/main.js')}}"></script>
+  <script src="{{ url_for('static', filename='js/jquery-2.2.3.min.js')}}"></script>
+  <script src="{{ url_for('static', filename='js/bootstrap.min.js')}}"></script>
+  <script src="{{ url_for('static', filename='js/app.min.js')}}"></script>
+  <script src="{{ url_for('static', filename='js/jquery.dataTables.min.js')}}"></script>
+  <script src="{{ url_for('static', filename='js/dataTables.bootstrap.min.js')}}"></script>
+
+  <script>
+      $(function () {
+          $("#dataphone").DataTable();
+
+      });
+  </script>
+</body>
+</html>

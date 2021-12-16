@@ -1,0 +1,236 @@
+{% extends 'cliente/layoutp.html' %}
+{% block body %}
+
+<div align="center">
+    <h1 class="WTitle">Escoge una opción de recarga</h1>
+</div>
+<br>
+<center>
+    <div align="center" class="success">
+        <p><strong>Saldo disponible:</strong><label id="tokens"> 10</label><label > Tokens</label></p>
+    </div>
+</center>
+
+<div>
+<br>
+    <div class="row1">
+        <div class="column1">
+          <div class="card">
+            <center>
+              <img src="{{ url_for('static', filename='/Images/10.png')}}" style="width:100%" alt="The Batman">
+            </center>
+            <h3 class="cardwords">Paquete básico</h3>
+            <p class="cardwords" ><b>10 tokens</b></p>
+            <p><button  class="modal-button" href="#myModal1">Recarga</button></p>
+          </div>
+        </div>
+      
+        <div class="column1">
+          <div class="card">
+            <center>
+              <img src="{{ url_for('static', filename='/Images/50.png')}}" style="width:100%" alt="The Batman">
+            </center>
+            <h3 class="cardwords">Paquete Medium</h3>
+            <p class="cardwords" ><b> 50 tokens</b></p>
+            <p><button class="modal-button" href="#myModal2" >Recarga</button></p>
+          </div>
+        </div>
+        
+        <div class="column1">
+          <div class="card">
+            <center>
+              <img src="{{ url_for('static', filename='/Images/100.png')}}" style="width:100%" alt="The Batman">
+            </center>
+            <h3 class="cardwords">Paquete Large</h3>
+            <p class="cardwords" ><b>100 tokens</b></p>
+            <p><button class="modal-button" href="#myModal3" >Recarga</button></p>
+          </div>
+        </div>
+        
+        <div class="column1">
+          <div class="card">
+            <center>
+              <img src="{{ url_for('static', filename='/Images/infinity.png')}}" style="width:100%" alt="The Batman">
+            </center>
+            <h3 class="cardwords">Paquete personalizado</h3>
+            <p class="cardwords" ><b>Escoge la cantidad de tokens</b></p>
+            <p><button class="modal-button" href="#myModal4">Recarga</button></p>
+          </div>
+        </div>
+      </div>
+</div>
+
+
+<!-- The Modal -->
+<div id="myModal1" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">×</span>
+      <h2>Paquete básico</h2>
+    </div>
+    <div class="modal-body">
+      <p style="font-size: large;">10  tokens por  S/. 10</p>
+        <label style="font-size: large;" for="quantity">Cantidad</label>
+        <input type="number" id="quantity1" name="quantity" min="1" max="100" value="1">
+    </div>
+    <br>
+    <div class="modal-footer">
+        <button class="modalButton" id="changebtn1">Recarga</button>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- The Modal -->
+<div id="myModal2" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">×</span>
+      <h2>Paquete básico</h2>
+    </div>
+    <div class="modal-body">
+      <p style="font-size: large;">50  tokens por  S/. 50</p>
+        <label style="font-size: large;" for="quantity">Cantidad</label>
+        <input type="number" id="quantity2" name="quantity" min="1" max="100" value="1"> 
+    </div>
+    <br>
+    <div class="modal-footer">
+        <button class="modalButton" id="changebtn2">Recarga</button>
+    </div>
+  </div>
+
+</div>
+
+<!-- The Modal -->
+<div id="myModal3" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">×</span>
+      <h2>Paquete básico</h2>
+    </div>
+    <div class="modal-body">
+      <p style="font-size: large;">100 tokens por  S/. 100</p>
+        <label style="font-size: large;" for="quantity">Cantidad</label>
+        <input type="number" id="quantity3" name="quantity" min="1" max="100" value="1">
+    </div>
+    <br>
+    <div class="modal-footer">
+        <button class="modalButton" id="changebtn3">Recarga</button>
+    </div>
+  </div>
+
+</div>
+
+<!-- The Modal -->
+<div id="myModal4" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">×</span>
+        <h2>Paquete básico</h2>
+    </div>
+    <div class="modal-body">
+      <p style="font-size: large;">x  tokens por  S/. x</p>
+        <label style="font-size: large;" for="quantity">Cantidad</label>
+        <input type="number" id="quantity4" name="quantity" min="200" max="1000" value="200">
+    </div>
+    <br>
+    <div class="modal-footer">
+        <button class="modalButton" id="changebtn4">Recarga</button>
+    </div>
+    </div>
+  
+  </div>
+  
+
+
+<script>
+   // Get the button that opens the modal
+var btn = document.querySelectorAll("button.modal-button");
+
+// All page modals
+var modals = document.querySelectorAll('.modal');
+
+// Get the <span> element that closes the modal
+var spans = document.getElementsByClassName("close");
+
+// When the user clicks the button, open the modal
+for (var i = 0; i < btn.length; i++) {
+ btn[i].onclick = function(e) {
+    e.preventDefault();
+    modal = document.querySelector(e.target.getAttribute("href"));
+    modal.style.display = "block";
+ }
+}
+
+// When the user clicks on <span> (x), close the modal
+for (var i = 0; i < spans.length; i++) {
+ spans[i].onclick = function() {
+    for (var index in modals) {
+      if (typeof modals[index].style !== 'undefined') modals[index].style.display = "none";    
+    }
+ }
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target.classList.contains('modal')) {
+     for (var index in modals) {
+      if (typeof modals[index].style !== 'undefined') modals[index].style.display = "none";    
+     }
+    }
+}
+
+</script>
+    
+<script>
+
+    var button1 = document.getElementById("changebtn1");
+    var button2 = document.getElementById("changebtn2");
+    var button3 = document.getElementById("changebtn3");
+    var button4 = document.getElementById("changebtn4");
+    var label = document.getElementById("tokens");
+    var Qty1 = document.getElementById("quantity1");
+    var Qty2 = document.getElementById("quantity2");
+    var Qty3 = document.getElementById("quantity3");
+    var Qty4 = document.getElementById("quantity4");
+    button1.onclick = function(e) {
+    var msg = "Está por comprar " + ((Qty1.value)*10).toString() + " Tokens"
+    alert(msg)
+    var curr = parseInt(label.innerText);
+    label.innerHTML = '';
+    label.innerHTML = "  " + ((Qty1.value)*10 + curr).toString();    
+ }
+ button2.onclick = function(e) {
+    var msg = "Está por comprar " + ((Qty2.value)*50).toString() + " Tokens"
+    alert(msg)
+    var curr = parseInt(label.innerText);
+    label.innerHTML = '';
+    label.innerHTML = "  " + ((Qty2.value)*50 + curr).toString();    
+ }
+ button3.onclick = function(e) {
+    var msg = "Está por comprar " + ((Qty3.value)*100).toString() + " Tokens"
+    alert(msg)
+    var curr = parseInt(label.innerText);
+    label.innerHTML = '';
+    label.innerHTML = "  " + ((Qty3.value)*100 + curr).toString();    
+ }
+ button4.onclick = function(e) {
+    var msg = "Está por comprar " + (Qty4.value).toString() + " Tokens"
+    alert(msg)
+    var curr = parseInt(label.innerText);
+    label.innerHTML = '';
+    label.innerHTML = "  " + ((Qty4.value)*1 + curr).toString();    
+ }
+
+</script>
+
+{% endblock %}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toke Inicio</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/AdminLTE.min.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/_all-skins.min.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dataTables.bootstrap.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="picture"></div>
+
+  <div class="header" id="myHeader">
+    <h3 class="Page_Title"> <a href="/">Toke </a> </h3>
+    <h3 class="navs1"> <a href="/About">About </a> </h3>
+    <h3 class="navs2"> <a href="/Registro">Register </a> </h3>
+    <h3 class="navs3"> <a href="/Admin">Admin </a></h3>
+    <h3 class="navs4"> <a href="/vender">Sell </a> </h3>
+  </div>
+  
+  <div>
+    <h1 class="Big_Title"> Create an Account </h1>
+  </div>
+  <br>
+  <br><br><br>
+  <div class="container">
+    <section class="content">
+        <div class="box box-info">
+            <br><br>
+            <form class="form-horizontal" method="POST" action="/register">
+                <div class="box-body">
+
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Nombre</label>
+
+                        <div class="col-sm-10">
+                            <input name="nombre" type="text" class="form-control" placeholder="Nombre" autocomplete="off"
+                                required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label">Contraseña</label>
+
+                      <div class="col-sm-10">
+                          <input name="contra1" type="password" class="form-control" placeholder="Nombre" autocomplete="off"
+                              required>
+                      </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Confirmar Contraseña</label>
+
+                    <div class="col-sm-10">
+                        <input name="contra2" type="password" class="form-control" placeholder="Nombre" autocomplete="off"
+                            required>
+                    </div>
+                </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Telefono</label>
+
+                        <div class="col-sm-10">
+                            <input name="telefono" type="text" class="form-control" placeholder="Telefono"
+                                autocomplete="off" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Email</label>
+
+                        <div class="col-sm-10">
+                            <input name="email" type="text" class="form-control" placeholder="Email"
+                                autocomplete="off" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="box-footer">
+                    <input name="Register" type="submit" class="btn btn-info pull-right" value="Register">
+                </div>
+
+            </form>
+        </div>
+    </section>
+</div>
+
+  <!-- <form method="POST" action="/register" class="container-custom">
+    <label for="fname">e-mail:</label><br>
+    <input class="lighttext" type="text" placeholder="example@mail.com" id="mail" required><br><br>
+    <label for="fname">Contraseña:</label><br>
+    <input class="lighttext" type="password" placeholder="Enter Password" id="password" required><br><br>
+    <label for="fname">Confirmar Contraseña:</label><br>
+    <input class="lighttext" type="password" placeholder="Enter Password" id="Cpassword"><br><br>
+    <label for="fname">Número de teléfono</label><br>
+    <input class="lighttext" placeholder="999888777" id="number" required><br><br>
+    <label><input type="checkbox" checked="checked" name="remember"> Recordar cuenta</label><br><br>
+    <input class="lighttext" type="submit" value="submit" name="RegisterBttn" id="RegisterBttn" onclick="ONSub()"><br><br>
+    <label class="warning" id="Warn"> Please fill all fields <Label></Label><br><br>
+    <label class="warning" id="Warn2"> Passwords do not match <Label></Label>
+  </form> -->
+
+  <script src="{{ url_for('static', filename='js/main.js')}}"></script>
+  <script src="{{ url_for('static', filename='js/register.js')}}"></script>
+  <script src="{{ url_for('static', filename='js/jquery-2.2.3.min.js')}}"></script>
+  <script src="{{ url_for('static', filename='js/bootstrap.min.js')}}"></script>
+  <script src="{{ url_for('static', filename='js/app.min.js')}}"></script>
+  <script src="{{ url_for('static', filename='js/jquery.dataTables.min.js')}}"></script>
+  <script src="{{ url_for('static', filename='js/dataTables.bootstrap.min.js')}}"></script>
+
+  <script>
+      $(function () {
+          $("#dataphone").DataTable();
+
+      });
+  </script>
+</body>
+</html>

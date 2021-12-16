@@ -1,0 +1,194 @@
+{% extends 'cliente/layoutp.html' %}
+{% block body %}
+
+<div class="container">
+
+    <div align="center">
+        <h1 class="WTitle">Bienvenido a Toke</h1>
+    </div>
+    
+    <br>
+    
+    <div align="center">
+
+      <h3 class="WTitle">Se parte de las subastas más recientes</h3>  
+
+    </div>
+
+    <br>
+
+    <div class="container">
+        <div class="container2">
+            <div class="mySlides">
+              <div class="numbertext">1 / 6</div>
+              <center>
+                <img src="{{ url_for('static', filename='/Images/batman.png')}}" style="width:400px;height: 400px;">
+              </center>
+              
+            </div>
+          
+            <div class="mySlides">
+              <div class="numbertext">2 / 6</div>
+              <center>
+                <img src="{{ url_for('static', filename='/Images/hulkbuster.jpg')}}" style="width:400px;height: 400px;">
+              </center>
+              
+            </div>
+          
+            <div class="mySlides">
+              <div class="numbertext">3 / 6</div>
+              <center>
+                <img src="{{ url_for('static', filename='/Images/terminator.jpg')}}" style="width:400px;height: 400px;">
+              </center>
+              
+            </div>
+              
+            <div class="mySlides">
+              <div class="numbertext">4 / 6</div>
+              <center>
+                <img src="{{ url_for('static', filename='/Images/toycar.jpg')}}" style="width:600px;height: 400px;">
+              </center>
+              
+            </div>
+          
+            <div class="mySlides">
+              <div class="numbertext">5 / 6</div>
+              <center>
+                <img src="{{ url_for('static', filename='/Images/penny.jpg')}}" style="width:500px;height: 400px;">
+              </center>
+              
+            </div>
+              
+            <div class="mySlides">
+              <div class="numbertext">6 / 6</div>
+              <center>
+                <img src="{{ url_for('static', filename='/Images/emeralds.jpg')}}" style="width:500px;height: 400px;">
+              </center>
+              
+            </div>
+              
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+          
+            <div class="caption-container">
+              <p id="caption"></p>
+            </div>
+          
+            <div class="row">
+              <div class="column">
+                <center>
+                    <img class="demo cursor" src="{{ url_for('static', filename='/Images/batman.png')}}" style="width:100px;height:100px" onclick="currentSlide(1)" alt="The Batman">
+                </center>
+              </div>
+              <div class="column">
+                <center><img class="demo cursor" src="{{ url_for('static', filename='/Images/hulkbuster.jpg')}}" style="width:100px;height:100px" onclick="currentSlide(1)" alt="Hulk vs Hulbuster"></center>
+              </div>
+              <div class="column">
+                <center><img class="demo cursor" src="{{ url_for('static', filename='/Images/terminator.jpg')}}" style="width:100px;height:100px" onclick="currentSlide(3)" alt="Terminator"></center>
+              </div>
+              <div class="column">
+                <center><img class="demo cursor" src="{{ url_for('static', filename='/Images/toycar.jpg')}}" style="width:100px;height:100px" onclick="currentSlide(4)" alt="Carro de colección"></center>
+              </div>
+              <div class="column">
+                <center><img class="demo cursor" src="{{ url_for('static', filename='/Images/penny.jpg')}}" style="width:100px;height:100px" onclick="currentSlide(5)" alt="Centavo de 1914"></center>
+              </div>    
+              <div class="column">
+                <center><img class="demo cursor" src="{{ url_for('static', filename='/Images/emeralds.jpg')}}" style="width:100px;height:100px" onclick="currentSlide(6)" alt="Collar de la princesa de Vlatava"></center>
+              </div>
+            </div>
+          </div>
+    </div>
+    
+    <br><br>
+    
+        <h2 class="WTitle" >Artículos más vendidos</h2>
+    
+    <div>
+        <div class="row1">
+            <div class="column1">
+              <div class="card">
+                <center>
+                  <img src="{{ url_for('static', filename='/Images/batman.png')}}" style="width:100%" alt="The Batman">
+                </center>
+                <h3 class="cardwords">The Batman</h3>
+                <p class="cardwords">vendendor: DC </p>
+                <p class="cardwords" ><b>Precio inicial: 10 tokens</b></p>
+                <p><button>Ir a Subasta</button></p>
+              </div>
+            </div>
+          
+            <div class="column1">
+              <div class="card">
+                <center>
+                  <img src="{{ url_for('static', filename='/Images/alien.jpg')}}" style="width:100%" alt="The Batman">
+                </center>
+                <h3 class="cardwords">Alien</h3>
+                <p class="cardwords">Vendedor: 20th Century Studios </p>
+                <p class="cardwords" ><b>Precio inicial: 20 tokens</b></p>
+                <p><button>Ir a Subasta</button></p>
+              </div>
+            </div>
+            
+            <div class="column1">
+              <div class="card">
+                <center>
+                  <img src="{{ url_for('static', filename='/Images/predator.jpg')}}" style="width:100%" alt="The Batman">
+                </center>
+                <h3 class="cardwords">Predator</h3>
+                <p class="cardwords">Vendedor: 20th Century Studios</p>
+                <p class="cardwords" ><b>Precio inicial: 30 tokens</b></p>
+                <p><button>Ir a Subasta</button></p>
+              </div>
+            </div>
+            
+            <div class="column1">
+              <div class="card">
+                <center>
+                  <img src="{{ url_for('static', filename='/Images/pok.jpg')}}" style="width:100%" alt="The Batman">
+                </center>
+                <h3 class="cardwords">Pokémon figure</h3>
+                <p class="cardwords">Vendedor nintendo </p>
+                <p class="cardwords" ><b>Precio inicial: 50 tokens</b></p>
+                <p><button>Ir a Subasta</button></p>
+              </div>
+            </div>
+          </div>
+          
+          
+    </div>
+
+</div>
+
+  <script>
+  var slideIndex = 1;
+  showSlides(slideIndex);
+  
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+  
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+  
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("demo");
+    var captionText = document.getElementById("caption");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    captionText.innerHTML = dots[slideIndex-1].alt;
+  }
+  </script>
+      
+
+{% endblock %}

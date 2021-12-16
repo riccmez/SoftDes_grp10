@@ -1,0 +1,35 @@
+{% extends 'layout.html' %}
+{% block body %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+<div class="container">
+
+    <center> <h1 style="color: black;font-family: Roboto,sans-serif;">Bienvenido trabajador de Toke</h1> </center>
+
+    <h2>Estadísticas</h2>
+    <h3>Usuarios nuevos</h3>
+    <center>
+        <canvas id="myChart" style="position:relative; width:100%;max-width:700px"></canvas>
+    </center>
+    <h3>Tráfico</h3>
+    <center>
+        <canvas id="Tráfico" style="position:relative; width:100%;max-width:700px"></canvas>
+    </center>
+    <h3>Crecimiento</h3>
+    <center>
+        <canvas id="earnings" style="position:relative; width:100%;max-width:700px"></canvas>
+    </center>
+    <h2>Tareas</h2>
+
+    <div class="alert alert-info alert-dismissible">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>     
+        <b>Tarea 1 del día </b> Agregar un nuevo empleado: 
+        <li>Nombre: José</li>
+        <li>Telefono: 999888777</li>
+        <li>email: josé@toke.com</li>
+    </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='js/chart.js')}}"></script>
+
+{% endblock %}
