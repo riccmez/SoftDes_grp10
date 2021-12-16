@@ -1,4 +1,33 @@
 {% extends 'vendedor/layout.html' %}
 {% block body %}
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+<div class="container">
+
+    <center> <h1 style="color: black;font-family: Roboto,sans-serif;">Bienvenido a Ventas</h1> </center>
+
+    <h2>Estadísticas</h2>
+    <h3>Ventas Totales</h3>
+    <center>
+        <canvas id="myChart2" style="position:relative; width:100%;max-width:700px"></canvas>
+    </center>
+
+    <h3>Ventas por Producto</h3>
+    <center>
+        <canvas id="earnings2" style="position:relative; width:100%;max-width:700px"></canvas>
+    </center>
+    <h2>Tareas</h2>
+
+    <div class="alert alert-info alert-dismissible">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>     
+        <b>Tarea 1 del día </b> Agregar un producto: 
+        <li>Producto: Alien</li>
+        <li>Categoria: Colección</li>
+        <li>Stock: 50</li>
+    </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='js/chart.js')}}"></script>
+
 {% endblock %}

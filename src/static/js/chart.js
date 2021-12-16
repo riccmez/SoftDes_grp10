@@ -21,6 +21,23 @@ new Chart("myChart", {
   }
 });
 
+
+new Chart("myChart2", {
+  type: "line",
+  data: {
+    labels: xValues,
+    datasets: [{
+      label: 'Ventas',
+      data: [1600,1700,1700,1900,2000,2700,4000,5000,6000,7000],
+      borderColor: "green",
+      fill: false
+    }]
+  },
+  options: {
+    legend: {display: true}
+  }
+});
+
 new Chart("Tráfico", {
     type: "line",
     data: {
@@ -45,6 +62,22 @@ new Chart("earnings", {
     labels: xValues,
     datasets: [{
       label: 'Crecimiento %',
+      backgroundColor: 'blue',
+      data:[0,10,12,15],
+    }]
+  },
+  options: {
+    legend: {display: true}
+  }
+});
+
+
+new Chart("earnings2", {
+  type: "bar",
+  data: {
+    labels: ['Predataor','The Batman','Alien','Pokemon'],
+    datasets: [{
+      label: 'Ventas por producto',
       backgroundColor: 'blue',
       data:[0,10,12,15],
     }]

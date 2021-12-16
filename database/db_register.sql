@@ -1,12 +1,12 @@
-mysql -u root -p.
+us.
 drop database db_poo;
 
 create database db_mails;
 
 use db_mails;
 
-CREATE TABLE ventas (
-  id int(5) NOT NULL primary key auto_increment,
+CREATE TABLE IF NOT EXISTS ventas (
+  id int(5) NOT NULL primary key AUTO_INCREMENT,
   nombre varchar(50) NOT NULL,
   categoria varchar(50) NOT NULL,
   cantidad varchar(50) NOT NULL,

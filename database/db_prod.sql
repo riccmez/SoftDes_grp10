@@ -5,7 +5,7 @@ create database db_prod;
 use db_prod;
 
 CREATE TABLE productos (
-  id int(5) NOT NULL primary key auto_increment,
+  id int(5) ,
   producto varchar(50) NOT NULL,
   cantidad int(5) NOT NULL,
   tipo varchar(50) NOT NULL
